@@ -1,34 +1,40 @@
 ## 合成大西瓜
 
-未修改版源码，可直接在浏览器运行。
+第一步，扫码或者长按识别下面的二维码，关注「沉默王二」公众号：
 
-详细教程：https://mp.weixin.qq.com/s/H9VR1MWn-9bKSC_1l_MkJw
+![](./assets/dadaxigua_03.png)
 
-在线玩：[https://daxigua.liyupi.com](https://daxigua.liyupi.com)
-
-看了下源码，改分数还是挺简单的，就也做了魔改版~ 输入分数加成（纯数字）即可，输入 1 为原版
-
-魔改版在线玩：[https://dadaxigua.liyupi.com](https://dadaxigua.liyupi.com)
-
-![秀爆朋友圈](./assets/dadaxigua.png)
+第二步，在公众号后台发送 **大西瓜** 获取在线试玩地址。
 
 ### 本地启动
 
-1. 安装 serve 工具：
+第一步，安装 Node.js，可以通过下面的路径下载安装包。
 
-    ```bash
-    npm i -g serve
-    ```
+>http://nodejs.cn/download/
 
-2. 进入 daxigua 目录，运行 serve：
+安装完成后通过 `npm -v` 查看是否安装成功。npm 是 Node.js 的模块管理器，功能及其强大。
 
-    ```bash
-    serve
-    ```
-   
-3. 打开浏览器访问 localhost:5000 即可！
+第二步，安装 Vue CLI，一个基于 Vue.js 进行快速开发的完整系统，提供了一个运行时依赖。文档见一下路径：
 
-4. 想要修改只需在 src/project.js 文件中搜索 '// '（斜杠斜杠空格），就能快速找到对应修改位置！
+>https://cli.vuejs.org/zh/guide/
+
+安装完成后通过 `vue --version` 查看是否安装成功。
+
+第三步，安装 serve 服务，可通过 `npm i serve -g` 命令进行安装，如果 npm 安装比较慢的话，可以通过 `cnpm` 来安装。cnpm 是淘宝提供的一个 npm 的镜像，国内访问的速度更快。
+
+如果出现 `Error: EACCES: permission denied` 表示没有权限，需要在命令前面加上 `sudo`，我在《[Shell，牛逼](https://mp.weixin.qq.com/s/oEo8N3nE0wR1zl7qD4nh3w)》 这篇内容里有解释。
+
+安装完成后通过 `serve -v` 查看是否安装成功。
+
+第四步，进入到合成大西瓜的源码包下，执行 `serve` 启动本地 Web 服务。
+
+![](./assets/dadaxigua_01.png)
+
+第五步，在浏览器地址栏键入本地或者网络可以访问的地址就可以启动 Web 服务器了。趁机玩了一把，舒服了。
+
+![](./assets/dadaxigua_02.gif)
+
+ 第六步，想要修改只需在 src/project.js 文件中搜索 '// '（斜杠斜杠空格），就能快速找到对应修改位置！
 
 ### 魔改原理
 
@@ -64,6 +70,10 @@ a.default.score += this.fruitNumber + extraScore
 
 大家可以学习下作者的源码，真的强！
 
+关于魔改的更多参数，可以参照鱼皮老弟的文章：
+
+>https://juejin.cn/post/6923047027475644430
+
 ### 发布上线
 
 在本地修改好代码后，怎么发布到网上供其他人访问呢？
@@ -81,3 +91,5 @@ a.default.score += this.fruitNumber + extraScore
 Vercel：[尝鲜 Svelte 新框架，动手开发读书笔记](https://mp.weixin.qq.com/s/W-TWxOJTr4gSQkCyIquNuA)
 
 后面会给大家出详细的独立部署教程！
+
+
